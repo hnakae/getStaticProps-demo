@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useRouter } from "next/router";
 
 const Product = ({ product }) => {
@@ -12,7 +11,7 @@ const Product = ({ product }) => {
   return (
     <>
       <h2>
-        {product.id} {product.title}
+        id:{product.id} title:{product.title} price:{product.price}
       </h2>
       <p>{product.description}</p>
     </>
@@ -39,10 +38,17 @@ export async function getStaticProps(context) {
   );
   const data = await response.json();
 
+  if (!data.id) {
+    return {
+      notFound: true,
+    };
+  }
+
   console.log(`Generating page for /products/${params.productId}`);
   return {
     props: {
       product: data,
     },
+    revalidate: 10,
   };
 }
