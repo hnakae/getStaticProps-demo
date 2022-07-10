@@ -1,4 +1,40 @@
 {
+    "events": [
+        {
+            "id": 1,
+            "title": "Event 1",
+            "description": "Event 1 description",
+            "category": "sports",
+            "date": "April 25"
+        },
+        {
+            "id": 2,
+            "title": "Event 2",
+            "description": "Event 2 description",
+            "category": "abc",
+            "date": "April 25"
+        },
+        {
+            "id": 3,
+            "title": "Event 3",
+            "description": "Event 3 description",
+            "category": "sports",
+            "date": "April 25"
+        },
+        {
+            "id": 4,
+            "title": "Event 4",
+            "description": "Event 4 description",
+            "category": "abc",
+            "date": "April 25"
+        }
+    ],
+    "dashboard": {
+        "posts": 5,
+        "likes": 100,
+        "followers": 20,
+        "following": 50
+    },
     "news": [
         {
             "id": "1",
